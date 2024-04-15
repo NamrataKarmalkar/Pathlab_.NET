@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>@ViewData["Title"] - PathLab</title>
+    
+    
+   <link href="~/css/Style.css" rel="stylesheet" /> 
+   
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/DemoRegAndLoginWithIdentity.styles.css" asp-append-version="true" />
+    <style>
+        .full-footer {
+            background-color: #f2f2f2;
+            padding: 20px 0;
+        }
+        .footer-wrap {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #202020;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"> 
+            <div class="container-fluid">
+
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">PathLab</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="AppRoles" asp-action="Index">Roles</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Class" asp-action="Index">Appointments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Class" asp-action="Add">Book-a-Test</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Patients" asp-action="Index">Test Record</a>
+                        </li>
+
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">About Us</a>
+                        </li> 
+
+                         @* <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Nprivacy">Contact Us</a>
+                        </li>  *@
+                    </ul>
+                </div>
+            </div>
+            <partial name="_LoginPartial"></partial>
+        </nav> 
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>                                                                                                                                                                                                              
+    <br/><br/><br/>
+    <div class="full-footer">
+        <div class='Footer'>
+            <div class='container'>
+                <div class='row' id="raw">
+                    <div class='col-md-6 col-lg-3  col-12 ft-1'>
+                        <h4 id="eve">Pathlab</h4>
+                        <p id="para">
+                            Pathology is the study of disease and injury. The word pathology also refers to the study of disease in general, incorporating a wide range of biology research fields and medical practices. However, when used in the context of modern medical treatment, the term is often used in a narrower fashion to refer to processes and tests that fall within the contemporary medical field of "general pathology", an area that includes a number of distinct but inter-related medical specialties that diagnose disease, mostly through analysis of tissue and human cell samples.
+                        </p>
+                    </div>
+                    <div class='col-md-6 col-lg-2  col-12 ft-2'>
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li class="nav-item">
+                                <a href="/Home/Privacy" class="nav-link">About Us</a>
+                            </li> 
+
+                           @*  <li class="nav-item">
+                                <a href="/Home/Nprivacy" class="nav-link">Contact Us</a>
+                            </li>   *@
+                        </ul>
+                    </div>
+                    <div class='col-md-6 col-lg-3  col-12 ft-3'>
+                        <h5>Follow Pathlab</h5>
+                        <div class='footer-icons'>
+                            <i class="fab fa-facebook"></i>
+                            <i class="fa-brands fa-x-twitter"></i>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                    </div>
+                    <div class='col-md-6 col-lg-3  col-12 ft-4'>
+                        <h5>Contact Info</h5>
+                        <div class='contact'>
+                            <p><i class="fas fa-phone-volume"></i>+91 9632587410</p>
+                            <p><i class="fas fa-envelope"></i>pathlab@gmail.com</p>
+                            <p><i class="fas fa-map-marker"></i>Mumbai, Maharashtra, India.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-wrap'>
+            Copyright. Pathlab. All rights reserved.
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    @* <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - PathLab - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer> *@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @* @await RenderSectionAsync("Scripts", required: false) *@
+</body>
+</html>

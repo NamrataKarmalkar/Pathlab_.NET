@@ -1,0 +1,15 @@
+﻿@{
+    if(User.IsInRole("Admin"))
+    {
+        Layout = "/Views/Shared/_Layout.cshtml";
+    }
+    else if(User.IsInRole("Patients"))
+    {
+        Layout = "/Views/Shared/_Patients.cshtml";
+    }
+    else
+    {
+        Layout = "/Views/Shared/_Layout.cshtml"; 
+    }
+
+}
